@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock title %}
+{% block content %}
+<article>
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-[#1f2d3d] mb-4">{{ article.title }}</h1>
+        <div class="text-xs text-gray-400 font-bold uppercase tracking-widest">{{ article.locale_date }}</div>
+    </header>
+    <div class="prose max-w-none text-gray-600">
+        {{ article.content }}
+    </div>
+</article>
+{% endblock content %}

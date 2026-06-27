@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#e4e8ec] text-gray-800">
+    <!-- Header -->
+    <header class="py-10 text-center bg-white border-b border-gray-100">
+        <div class="text-gray-400 text-xs tracking-[0.2em] font-semibold uppercase mb-3">Scientific Publisher</div>
+        <h1 class="text-5xl font-bold tracking-widest text-[#1f2d3d] uppercase"
+            style="font-family: 'Times New Roman', Times, serif;">
+            <span style="font-family: 'Raleway', sans-serif;">BƯỚC NHỎ</span>
+        </h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-[#1f2d3d] text-[#d9e2e8]">
+        <div class="max-w-6xl mx-auto px-4">
+            <ul
+                class="flex flex-wrap justify-center space-x-8 md:space-x-12 text-[13px] font-semibold tracking-wide py-4">
+                <li><a href="{{ SITEURL }}/" class="hover:text-white transition-colors">Home</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Physics & Space</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Biology & Nature</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">History of Science</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Technology</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Scientific Method</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Grid -->
+    <div class="max-w-6xl mx-auto px-5 lg:px-8 py-10 bg-white border-x border-b border-gray-200">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
+            <!-- Left Column: Articles -->
+            <main class="md:col-span-8">
+                {% block content %}
+                {% endblock content %}
+            </main>
+
+            <!-- Right Column: Sidebar -->
+            <aside
+                class="md:col-span-4 md:-mt-4 relative z-10 bg-[#ebedf0] p-6 lg:p-8 border border-gray-200 rounded-sm shadow-inner space-y-10">
+                <!-- Search -->
+                <div class="flex">
+                    <input type="text" placeholder="Search..."
+                        class="w-full border border-gray-200 p-2 text-sm text-gray-600 focus:outline-none focus:border-gray-400">
+                    <button class="bg-[#b31b1b] hover:bg-[#921515] transition-colors text-white px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+
+
+                <!-- About Authors -->
+                <div>
+                    <h3 class="font-bold text-[17px] mb-4 text-[#1a252f] border-b border-gray-200 pb-3">About the
+                        Authors</h3>
+                    <div class="text-[13px] text-gray-500 space-y-4 leading-relaxed pr-4">
+                        <p>
+                            Welcome to The Scientific Reader. This platform is dedicated to exploring the intricacies of
+                            scientific discovery, the marvels of nature, and the history of technological innovation.
+                        </p>
+                        <p>
+                            Through rigorously researched articles, insightful analysis, and thought-provoking
+                            discussions, we aim to make complex scientific concepts accessible to curious minds
+                            everywhere.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Science in the news -->
+                <div>
+                    <h3 class="font-bold text-[17px] mb-4 text-[#1a252f] border-b border-gray-200 pb-3">Science in the
+                        News</h3>
+                    <ul class="space-y-4 text-[13px] text-gray-600 leading-relaxed pr-4">
+                        <li><a href="#" class="hover:text-[#b31b1b] transition-colors">Latest Discoveries in Quantum
+                                Computing</a></li>
+                        <li><a href="#" class="hover:text-[#b31b1b] transition-colors">The James Webb Space Telescope's
+                                Newest Images</a></li>
+                        <li><a href="#" class="hover:text-[#b31b1b] transition-colors">Breakthrough in Renewable Energy
+                                Storage</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="bg-gray-50 py-10 text-center text-sm text-gray-400 border-t border-gray-200">
+        &copy; 2026 Bước Nhỏ. All rights reserved.
+    </footer>
+</body>
+
+</html>
