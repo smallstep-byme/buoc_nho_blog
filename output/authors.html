@@ -55,7 +55,7 @@
             <aside
                 class="md:col-span-4 md:-mt-4 relative z-10 bg-[#ebedf0] p-6 lg:p-8 border border-gray-200 rounded-sm shadow-inner space-y-10">
                 <!-- Search -->
-                <div class="flex">
+                <div class="hidden">
                     <input type="text" placeholder="Search..."
                         class="w-full border border-gray-200 p-2 text-sm text-gray-600 focus:outline-none focus:border-gray-400">
                     <button class="bg-[#b31b1b] hover:bg-[#921515] transition-colors text-white px-4 py-2">
@@ -71,8 +71,11 @@
 
                 <!-- About Authors -->
                 <div>
-                    <h3 class="font-bold text-[17px] mb-4 text-[#1a252f] border-b border-gray-200 pb-3">About the
-                        Authors</h3>
+                    <div class="flex justify-center mb-4 border-b border-gray-200 pb-4">
+                        <img src="/theme/images/avatar.jpg" alt="Author Avatar"
+                            class="w-28 h-28 rounded-full object-cover shadow-sm border-2 border-white"
+                            onerror="this.src='https://ui-avatars.com/api/?name=BN&background=d9e2e8&color=1f2d3d&size=200'">
+                    </div>
                     <div class="text-[13px] text-gray-500 space-y-4 leading-relaxed pr-4">
                         <p>
                             Welcome to The Scientific Reader. This platform is dedicated to exploring the intricacies of
